@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="berita"
+            type="com.willyramad.viewbinding.Berita" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="@color/abu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgBerita"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                app:imageResource="@{berita.img}" />
+            <TextView
+                android:text="@{berita.penulis}"
+                android:id="@+id/tvNamaPenulis"
+                android:layout_below="@id/tvKonten"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="5dp"
+                android:textStyle="italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@{berita.judul}"
+                android:id="@+id/tvJudul"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgBerita"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:id="@+id/tvKonten"
+                android:layout_below="@id/imgBerita"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@{berita.konten}"/>
+
+            <TextView
+                android:id="@+id/tvTanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{berita.tanggal}"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tvKonten"
+                android:layout_margin="5dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

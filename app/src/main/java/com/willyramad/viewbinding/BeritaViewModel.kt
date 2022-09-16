@@ -1,0 +1,25 @@
+package com.willyramad.viewbinding
+
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+
+class BeritaViewModel : ViewModel() {
+
+    val  list = arrayListOf(
+        Berita("Tia Agnes Astuti", "Film One Piece: Red Raup Untung Rp 1,2 Triliun", "Sejak akhir bulan lalu, film One Piece: Red menjadi pembicaraan di kalangan para penggemarnya. Ditayangkan pada 6 September, film yang diadaptasi dari manga Eiichiro Oda itu disebut raup keuntungan lebih dari Rp 1 triliun selama sebulan. Selama 4 minggu berturut-turut, One Piece: Red menjual 8,6 juta tiket. Di awal penayangan, sudah ada 1,5 juta tiket yang terjual. Dalam waktu 9 hari, masyarakat Jepang sudah membeli tiketnya sebanyak 4,7 juta tiket dan angka itu terus naik sampai di hari ke023 dengan 8,2 juta tiket. Hasil penghitungan terakhir adalah 8,6 juta selama 26 hari penayangan di bioskop.","02-09-2022", R.drawable.one),
+        Berita("Agatha Vidya Nariswari", "Drama Ultah Puan Maharani saat Demo BBM: Picu Amarah hingga Laporan ke MKD DPR Disetop", "Perayaan ulang tahun (ultah) Ketua DPR RI, Puan Maharani saat pelaksanaan sidang paripuna memantik amarah publik. Bahkan, sang Ketua DPR RI tersebut sempat dilaporkan ke Mahkamah Kehormatan Dewan (MKD) meski kini telah resmi disetop. Adapun perayaan hari yang seharusnya diwarnai dengan sukacita tersebut pada Selasa (6/9/2022) lalu justru berujung pada kecaman publik. Pasalnya, Puan dan para jajaran anggota parlemen merayakan hari jadi itu di tengah-tengah demo kenaikan BBM yang digelar oleh para buruh. Mari simak kilas balik perjalanan kasus ulang tahun Puan Maharani dari mencuat ke publik hingga kini berujung ke dihentikannya laporan ke MKD. Sempat viral hingga bikin masyarakat marah Hari ulang tahun Puan Maharani pada 6 September 2022 yang lalu bertepatan dengan deretan aksi massa yang menyuarakan penolakan terhadap kenaikan BBM. Aksi massa tersebut tersebar di berbagai titik dan diikuti oleh segenap lapisan masyarakat dari mahasiswa hingga buruh. Salah satu titik kumpul aksi massa tersebut tak jauh dari gedung Parlemen DPR RI. Menariknya, kala itu di dalam ruang sidang paripurna, Puan Maharani sedang merayakan ulang tahunnya, disambut dengan tepuk tangan meriah jajaran anggota dewan."
+                ,"06-09-2022", R.drawable.ultah_ibupuan),
+        Berita("Dwi Andayani", "Demo BBM Hari Ini Tersebar di 4 Titik Jabodetabek", "Demo massa menolak kenaikan harga bahan bakar minyak (BBM) hari ini masih terjadi. Demo massa hari ini tersebar di 4 titik di wilayah aglomerasi Jabodetabek. \"Untuk kekuatan pengamanan Polda Metro Jaya mengerahkan 6.142 personel untuk mengawal dan menjaga demo,\" kata Kabid Humas Polda Metro Jaya Kombes Endra Zulpan dalam keterangannya, Jumat (16/9/2022). Adapun, demo menolak BBM hari ini ada di 4 titik yakni Patung Kuda, gedung DPR/MPR, Balaikota DKI Jakarta dan Pemkot Bekasi. Demo tersebut dilakukan oleh kelompok elemen massa yang mayoritas merupakan mahasiswa."
+                 ,"16-09-2022", R.drawable.squidward),
+        Berita("Iwan Supriyatna", "SMRC: Puan Belum Kompetitif, PDIP Capreskan Ganjar, Kemenangan Terbuka", "PDIP kemungkinan besar akan menang dalam kontestasi Pilpres 2024 apabila mencalonkan Ganjar Pranowo sebagai calon presiden (Capres). Ganjar paling unggul dan paling kompetitif sebagai Capres PDIP apabila dibandingkan dengan Puan Maharani. Hal itu berdasarkan hasil survei Saiful Mujani Research and Consulting (SMRC) selama Agustus 2022 bertajuk 'Siapa Calon Presiden PDIP 2024?'. \"Data ini menunjukkan bahwa jika yang dicalonkan PDIP adalah Ganjar, harapan bagi PDIP untuk memenangkan Pilpres dan kembali memiliki presiden menjadi terbuka,\" kata pendiri SMRC Prof. Saiful Mujani. Saiful menjelaskan berdasarkan format survei semi terbuka pada Maret 2021 sampai Agustus 2022, pergerakan suara Puan tidak signifikan, dari 0,5 persen menjadi 1 persen. Sementara Ganjar Pranowo bergerak dari 8,8 persen menjadi 25,5 persen. Prabowo dari 20 persen menjadi 16,7 persen, dan Anies Baswedan dari 11,2 persen menjadi 14,4 persen.",
+            "16-09-2022",R.drawable.pk_ganjar),
+        Berita("Arief Apriadi", "Momen Cristiano Ronaldo Cetak Gol Perdana untuk Manchester United Musim Ini","Cristiano Ronaldo akhirnya membuka keran gol musim ini saat Manchester United menang 2-0 atas Sheriff Tiraspol dalam matchday kedua Grup E Liga Europa 2022-2023, Jumat (15/9/2022) dini hari WIB. Duel Sheriff vs Manchester United di Zimbru Stadium itu berakhir dengan skor 2-0 untuk kemenangan Setan Merah. Selain Cristiano Ronaldo, satu gol MU lainnya dicetak Jadon Sancho. Sebelum mengemas gol di laga ini, Cristiano Ronaldo melewatkan tujuh pertandingan tanpa gol untuk Manchester United asuhan Erik ten Hag sepanjang musim ini. Ronaldo mencetak gol pertamanya musim ini melalui tendangan penalti babak pertama. Ini adalah gol tingkat klub yang ke-699 bagi pemain berusia 37 tahun itu.",
+            "16-09-2022",R.drawable.cr)
+    )
+    val vmListBerita : MutableLiveData<List<Berita>> = MutableLiveData()
+
+    fun getBerita(){
+        var berita = list
+        vmListBerita.value = berita
+    }
+}
